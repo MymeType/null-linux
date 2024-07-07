@@ -1,7 +1,7 @@
 # Null Linux
 A GNU/Linux distribution based off precompiled Linux From Scratch.
 ## About
-Null Linux is an independent GNU/Linux distribution aiming to provide complete installs based off Linux From Scratch without the need to compile anything. As such, it has no package manager, no desktop enviroment, no window manager and no extra packages nor configurations installed, requiring the user to compile any packages tehy wish to install and configure everything themselves (NOTE: Instructions for compiling a multitude of packages can be found in [Beyond Linux From Scratch](https://www.linuxfromscratch.org/blfs/)).
+Null Linux is an independent GNU/Linux distribution aiming to provide complete installs based off Linux From Scratch without the need to compile anything. As such, it has no package manager, no desktop enviroment, no window manager and no extra packages nor configurations installed, requiring the user to compile any packages they wish to install and configure everything themselves (NOTE: Instructions for compiling a multitude of packages can be found in [Beyond Linux From Scratch](https://www.linuxfromscratch.org/blfs/)).
 ## Installation
  1. Boot into a GNU/Linux LiveCD of your choice.
  2. Log in as root with `sudo su` in a terminal window.
