@@ -5,7 +5,7 @@ Null Linux is an independent GNU/Linux distribution aiming to provide complete i
 ## Installation
  1. Boot into a GNU/Linux LiveCD of your choice.
  2. Log in as root with `sudo su` in a terminal window.
- 3. Partition your disk using a tool like `fdisk` to create a `/boot` partition of about 200 MB, a root partition of at least 10 GB and a swap partition double the size of your RAM. Suggestions for other partitions can be found [here](ttps://www.linuxfromscratch.org/lfs/view/stable/chapter02/creatingpartition.html).
+ 3. Partition your disk using a tool like `fdisk` to create a `/boot` partition of about 200 MB, a root partition of at least 10 GB and a swap partition double the size of your RAM. Suggestions for other partitions can be found [here](https://www.linuxfromscratch.org/lfs/view/stable/chapter02/creatingpartition.html).
  4. Format the root partition , the `/boot` partition and any eventual additional ones with a Linux filesystem like ext4 using `mkfs.ext4 /dev/<xxx>` and format the swap partition with `mkswap /dev/<yyy>`. If a `/boot/efi` partition has been made, it will have to be formatted with `mkfs.vfat /dev/<zzz>`.
  5. Create a directory to mount the root partition with `mkdir -p /mnt/null`, a directory for `/boot` with `mkdir -p /mnt/null/boot` and directories for additional partitions with `mkdir -p /mnt/null/<xxx>`.
  6.  Mount the root partition
