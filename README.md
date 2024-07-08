@@ -12,8 +12,7 @@ Null Linux is an independent GNU/Linux distribution aiming to provide complete i
  7. Download the rootfs tarball for Null Linux from the [releases page](https://github.com/MymeType/null-linux/releases) with `wget <LINK TO CURRENT RELEASE TARBALL>`.
  8. Extract the system to the disk from the rootfs tarball using `tar xpf <ROOTFS TARBALL NAME>.tar.xz`.
  9. Mount the virtual kernel filesystems using the following commands:<br>`mount --bind /dev /mnt/null/dev`<br>`mount -t devpts devpts -o gid=5,mode=0620 /mnt/null/dev/pts`<br>`mount -t proc proc /mnt/null/proc`<br>`mount -t sysfs sysfs /mnt/null/sys`<br>`mount -t tmpfs tmpfs /mnt/null/run`
- 10. On some GNU/Linux distributions, `/dev/shm` is a mount point for a tmpfs. In that case the mount of `/dev` above will only create `/dev/shm` as a directory in the chroot environment. In this situation you must run the following:<br> `if [ -h /mnt/null/dev/shm ]; then`<br>`install -d -m 1777 /mnt/null$(realpath /dev/shm)`<br>`else`
-  `mount -t tmpfs -o nosuid,nodev tmpfs /mnt/null/dev/shm`<br>`fi`
+ 10. On some GNU/Linux distributions, `/dev/shm` is a mount point for a tmpfs. In that case the mount of `/dev` above will only create `/dev/shm` as a directory in the chroot environment. In this situation you must run the following:<br> `if [ -h /mnt/null/dev/shm ]; then`<br>`install -d -m 1777 /mnt/null$(realpath /dev/shm)`<br>`else`<br>`mount -t tmpfs -o nosuid,nodev tmpfs /mnt/null/dev/shm`<br>`fi`
  11. Enter the system using `chroot /mnt/null /bin/bash`.
  12. Replace the password for the root account with a different one using `passwd`.
  13. Edit `/etc/sysconfig`, `/etc/resolv.conf`, `/etc/hostname` and `/etc/hosts` to your liking following the instructions [here](https://www.linuxfromscratch.org/lfs/view/stable/chapter09/network.html). 
