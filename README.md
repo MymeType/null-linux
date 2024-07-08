@@ -23,6 +23,6 @@ Null Linux is an independent GNU/Linux distribution aiming to provide complete i
  17. Exit the chroot environment with `logout`.
  18. Unmount the system from the LiveCD with the following commands:<br>`cd`<br>`umount /mnt/null/dev/pts`<br>`mountpoint -q /mnt/null/dev/shm && umount /mnt/null/dev/shm`<br>`umount /mnt/null/dev`<br>`umount /mnt/null/run`<br>`umount /mnt/null/proc`<br>`umount /mnt/null/sys`
  19. Unmount any extra partitions with `umount /mnt/null/<xxx>` and then the main root partition with `umount /mnt/null`
- 20. Reboot the system into the GRUB bootloader.
-***Congratulations! Null Linux is now installed on your computer!***
+ 20. Reboot the system into the GRUB bootloader.<br>
+***Congratulations! Null Linux is now installed on your computer!***<br>
 **For more resources on how to compile additional packages, see [Beyond Linux From Scratch](https://www.linuxfromscratch.org/blfs/).**
